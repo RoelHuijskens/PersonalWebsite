@@ -1,0 +1,273 @@
+
+<!--these elments will now define for all elements h3 and body the fgivven css specifications-->
+
+
+body {
+    font-family:Calibri;
+    font-size:1.3rem
+
+}
+
+div {
+    font-family:Calibri;
+    font-size:1.3rem
+}
+
+span {
+    font-family:Calibri;
+    font-size:1.3rem;
+}
+
+
+#my_id {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.5rem;
+}
+
+
+    <!--classes-->
+.my_border {
+    border: 4px black solid;
+    text-align:center;
+    padding:6rem;
+}
+
+.my_blue_text {
+    color:blue;
+
+}
+
+
+
+
+
+.box {
+    background-color:lightblue;
+    box-shadow:3px 3px 4px;
+    width:8rem;
+    height:4rem;
+    margin:1rem;
+}
+
+.big_canvas {
+    background-color:lightpink;
+    border: 4px solid black;
+    height:24rem;
+    padding:4rem
+}
+
+.flex-container {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+
+.flex-container_2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:column;
+}
+
+.flex-container_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+
+
+@-webkit-keyframes appear_anmiation {
+    from {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1
+    }
+}
+
+
+
+
+.box_animated:hover {
+    -webkit-animation-name: appear_anmiation;
+    -webkit-animation-duration: 0.3s;
+    background-color: lightblue;
+    box-shadow: 3px 3px 4px;
+    width: 8rem;
+    height: 4rem;
+    margin: 1rem;
+}
+
+
+.menu_button {
+    position:relative;
+    font-family:Calibri;
+    visibility:hidden;
+    text-decoration:none;
+    color:grey;
+}
+
+@-webkit-keyframes Float_in_text {
+    from {
+        left: 10rem;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+#menu_bar {
+    color: grey;
+    font-family: 'Calibri';
+    text-decoration: none;
+    height:10rem;
+
+}
+
+#footer {
+    color: grey;
+    text-decoration: none;
+    height: 5rem;
+    position:fixed;
+    width:100%;
+    bottom:0rem;
+    background-color:white;
+}
+
+.icons {
+    text-decoration:none;
+}
+
+
+#icon_low {
+    font-size:1.3rem;
+    color:grey;
+}
+
+
+
+    #menu_bar:hover > .menu_button {
+        -webkit-animation-name: Float_in_text;
+        -webkit-animation-duration: 0.5s;
+        visibility: visible;
+    }
+
+
+
+
+@-webkit-keyframes Flow_in_elements_top {
+    from {
+        top: 10rem;
+        opacity: 0;
+    }
+
+    to {
+        top: 0rem;
+        opacity: 1;
+    }
+}
+
+
+<!--first loading up starting page is slower-->
+
+#top_start {
+    position: relative;
+    -webkit-animation-name: Flow_in_elements_top;
+    -webkit-animation-duration: 5s;
+}
+
+
+#top_item {
+    position: relative;
+    -webkit-animation-name: Flow_in_elements_top;
+    -webkit-animation-duration: 2s;
+}
+
+
+@-webkit-keyframes Flow_in_elements_left {
+    from {
+        left: 10rem;
+        opacity: 0;
+    }
+
+    to {
+        left: 0rem;
+        opacity: 1;
+    }
+}
+
+#left_item {
+    position: relative;
+    -webkit-animation-name: Flow_in_elements_left;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes Flow_in_elements_right {
+    from {
+        right: 10rem;
+        opacity: 0;
+    }
+
+    to {
+        right: 0rem;
+        opacity: 1;
+    }
+}
+
+#right_item {
+    position: relative;
+    -webkit-animation-name: Flow_in_elements_right;
+    -webkit-animation-duration: 1s;
+}
+
+@-webkit-keyframes Flow_in_elements_bottom {
+    from {
+        bottom: 10rem;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 0rem;
+        opacity: 1;
+    }
+}
+
+#bottom_item {
+    position: relative;
+    -webkit-animation-name: Flow_in_elements_bottom;
+    -webkit-animation-duration: 1s;
+}
+
+
+#a_red_sentence {
+
+    color:red;
+}
+
+
+.project_text {
+    margin:1rem 20rem 1rem 20rem;
+    
+}
+
+
+#project_title:hover {
+    color:grey;
+}
+
+.menu_button:hover {
+    color: black;
+}
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<link rel="stylesheet" href="{{url_for('static', filename='My_Stylesheet.css')}}">
+</head>
+
+
+<body>
+
+
+
+<b>
+<span class="flex-container" id="menu_bar">
+        <a class="menu_button" href="./index">Home</a>
+        <a class="menu_button" href="./About">About</a>
+        <a class="menu_button" href="./projects">Projects</a>
+	<a class="menu_button" href="./More">More</a>
+        <span><a style = "font-family:'Calibri'">Menu</a><img src="{{url_for('static', filename='icons/Hamburger.png')}}" style="height:1rem;opacity:0.5;padding: 0rem 0rem 0rem 1rem"></span>
+    </span>
+</b>
+<main>
+
+	{% block content %} {% endblock %}
+
+</main>
+
+<br>
+<br>
+
+<div>
+
+
+
+<span class = "flex-container" id="footer">
+	<a class="icons" id="top_item" href="https://www.linkedin.com/in/roel-huijskens-385669143/">
+	<img src="{{url_for('static', filename='icons/icon-linkedin.png')}}" style="height:2rem;opacity:0.5"></a>
+	<a class="icons" id="top_item" href="https://github.com/RoelHuijskens"><img src="{{url_for('static', filename='icons/icon-github.png')}}" style="height:2rem;opacity:0.5"></a>	
+	<a class="icons" id="top_item" href="{{url_for('static', filename='CV_English.pdf')}}"><b id=icon_low style="font-family:Verdana">CV</b></a>
+	<a class="icons" id="top_item" href = "mailto: roelh@hotmail.com"><img src="{{url_for('static', filename='icons/mail.png')}}" style="height:2rem;opacity:0.5"></a>
+</span>
+
+
+</div>
+</body>
+</html>

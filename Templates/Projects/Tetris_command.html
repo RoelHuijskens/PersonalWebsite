@@ -1,0 +1,28 @@
+{% extends "Project_page.html" %}
+{% block content %}
+
+<div class="flex-container_3">
+    <div id="right_item" style="max-width:40%;min-width:20rem;">
+        <h2>Tetris in the command prompt</h2>
+        <p>
+            This project was one of my first serious steps into python, the idea is based on a youtube video by <a href="https://www.youtube.com/watch?v=8OK8_tHeCIA" style="color:grey">jarvidx9</a> a youtube channel I would highly recommend you check out. However, the idea presented in the video is executed
+            in C++ and at the time of starting this project, I had no experience in C++ whatsoever. However, I was intrigued by the idea and decided to have a go at it myself only using the general idea introduced by jarvidx9 and
+            implementing it in python. The main drawback of this interpretation over the idea presented in the video is the fact that python has (to my knowledge) no module which allows for the refresh rate of the command prompt to
+            synchronize with the update of the game. If such a module does exist, please let me know.
+        </p>
+
+        <p>
+            The way this game is played is very simple, call the python script in a directory of your choosing and fill in your name. Next, use the a key to move the currently active block to the left, d to move it to the right,
+            and w to turn the block clockwise. Normal Tetris rules apply and the scores are based on the standard Tetris rules. The better you play, the faster the blocks fall and the higher the score awarded per block
+        </p>
+
+        <p>  <a href="https://github.com/RoelHuijskens/Tetris_command" style="color:grey"> Good luck</a> </p>
+    </div>
+    <div style="min-width:40%;" class="flex-container">
+        <img src="/RoelHuijskens.github.io/assets/images/Tetris_screenshot.png" style="margin:0rem 10rem 0rem 0rem" id="left_item">
+    </div>
+
+
+ </div>
+
+{% endblock %}

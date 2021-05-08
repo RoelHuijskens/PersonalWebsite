@@ -1,0 +1,46 @@
+{% extends "Project_page.html" %}
+{% block content %}
+
+<div id="right_item" style="max-width:40%;min-width:40rem;padding:0rem 4rem">
+
+    <a href="https://link.springer.com/article/10.1007/s10519-020-10035-7" style="text-decoration:none;color:black"><h2 id="project_title"> Incorporating polygenic scores in the twin model to estimate genotype-environment covariance</h2></a>
+
+    <p>
+        This <a href="https://link.springer.com/article/10.1007/s10519-020-10035-7" style="color:grey">paper</a> is a continuation of my bachelor thesis which I completed under the supervision of
+        Prof. C.V. Dolan and was awarded the <a href="{{url_for('static', filename='Bachelor_thesis_certificate.pdf')}}" style="color:grey"><i>best bachelor thesis</i></a> of the psychology program 2018. It investigates the statistical power of detecting A-C covariance using an extended twin model.
+    </p>
+
+    <p>
+        Specifically, to measure to what extend certain phenotypes are heritable (e.g. IQ, Height, Conscientiousness) one can use a large sample of monozygotic and dizygotic twins. Monozygotic twins share 100%
+        of their genetic makeup and dizygotic twins share exactly 50% of their genetic makeup (represented as A in figure 1). However genetic makeup is only part of what causes phenotypic variation in the population, people experience different environments (e.g. living in a wealthy or poor neighborhood) which also contributes to the total phenotypic variance. This is captured in figures as C and E. The C
+        component comprises all environmental influences shared by a twin pair (e.g. same teachers/parents/SES), and the E component comprises of unshared environmental influences which may lead to phenotypic differences
+        between twins.
+    </p>
+    
+    <p>
+        Using the classical twin model presented in figure 1 it is possible to get an estimate of the individual contributions of the A, C, and E components on the variance of a given phenotype in a population. However, 
+        this model does not account for A-C or A-E correlations because there is not enough information in the sample to estimate these components (phenotypes of HZ and DZ twins). The A and C components may correlate with one another when 
+        one's genes determine what kind of environments an individual will be exposed to.
+        For example, people with a genetic predisposition for higher IQ scores are more likely to create a more cognitive stimulating environment for themselves (e.g. go to college). The classical twin model will
+        in the presence of A-C covariance either overestimate/underestimate the influence of the A/C component on a given phenotype. 
+    </p>
+
+    <p> This article investigates the statistical power of an extension of the classical twin model presented in figure 2. This extended model includes polygenic scores (a direct measure of gene expression based on a part of all relevant genes), 
+        the extra included information of polygenic scores (AL in figure 2) can account for A-C covariance.</p>
+    
+</div> 
+<div class="flex-container_2">
+    <img src="{{url_for('static', filename='images/CTM.jpg')}}" style="margin:0rem 10rem 0rem 0rem; width:35rem;" id="left_item">
+    <br>
+    <figcaption style="margin:0rem 10rem 0rem 0rem" id="left_item">Fig.1 - Classical twin model.</figcaption>
+    <br>
+    <br>
+    <img src="{{url_for('static', filename='images/Extended_twin_model.jpg')}}" style="margin:0rem 10rem 0rem 0rem; width:35rem;" id="left_item">\
+    <br>
+    <figcaption style="margin:0rem 10rem 0rem 0rem" id="left_item">Fig.2 - Extended twin model.</figcaption>
+
+
+</div>
+ </div>
+
+{% endblock %}

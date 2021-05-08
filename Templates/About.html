@@ -1,0 +1,33 @@
+
+{% extends "Default.html" %}
+{% block content %} 
+
+
+
+
+    <div style="height:10%"></div>
+
+    <span class="flex-container_3">
+        <div style="max-width:40%;min-width: 10% " id="Right_item">
+            <H2 style="text-align:center;font-family:Calibri;" id="right_item">About Me</H2>
+
+            Hi welcome, my name is Roel Huijskens, I am a 24-year-old research master graduate. When I was younger I always enjoyed challenging myself to learn stuff
+            that seems difficult. This started on a holiday in Texel where I picked up juggling balls and spent the majority of that summer juggling. My fascination with the human brain and the nervous system which also seemed to be an amazing puzzel, led me to choose psychology
+            as my major for my bachelor's. However, during my bachelor's, I discovered that unlike many of my fellow-students I especially enjoyed statistics heavy
+            courses, as I  enjoyed the challenge and reward of learning these topics. Therefore I decided to enroll in a high rated research master at Utrecht University dedicated to statistics. This led to a research internship at
+            Statistics Netherlands (CBS) where I investigated a method which allows for the use of non-probability samples (e.g. big data sources) to estimate population parameters in offical statistics.
+
+            <p>
+            In my spare time I enjoy tinkering in various programming languages, watching Netflix (currently watching the walking dead again), and working out. Currently, I am an IT trainee at <a  href="https://apg.nl/nl/over-apg/" style="color:darkslateblue" >APG</a> through 
+			<a href="https://www.createment.nl/" style="color:purple">Createment </a> where I am working with Python, R-studio, Alteryx & Clik to support traders/researchers at APG and to enable them to create a better
+                financial future for millions of people in the Netherlands.
+
+            </p>
+
+        </div>
+        <div style="width:40%;" class="flex-container">
+        <img src="{{url_for('static', filename='images/Me_again.jpeg')}}" style="height: 36rem;box-shadow: 10px 10px 15px;border-radius:10%" id="Left_item">
+        </div>
+    </span>
+
+{% endblock %}

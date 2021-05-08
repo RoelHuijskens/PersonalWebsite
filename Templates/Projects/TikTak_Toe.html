@@ -1,0 +1,29 @@
+{% extends "Project_page.html" %}
+{% block content %}
+
+<div class="flex-container" style="padding:5%">
+    <div id="right_item" style="max-width:40%;min-width:20rem;">
+
+        <h2>Tic tac toe</h2>
+        <p>
+            After watching the very intriguing documentary about <a href="https://www.youtube.com/watch?v=WXuK6gekU1Y&t=4432s" style="color:grey">AlphaGo</a>, a program created by DeepMind, I got interested in the field of reinforcement learning.
+            I am currently (slowly) working through a <a href="https://learningtoplay.net/" style="color:grey">book</a> on reinforcement learning by Aske Plaat. This little program is my very first implementation of the ideas about reinforcement learning presented in the
+            third chapter. It consists of a recursive function which will play out all of the possible games of tic tac toe on a 3x3 playing field and will decide based on all the outcomes down the line (win (+0.99), lose(-1) or tie(0))
+            ) which move to pick next against the current opponent.
+
+        </p>
+
+        <p> <a href="https://github.com/RoelHuijskens/Tick_Tack_Trying" style="color:grey"> Good luck</a></p>
+
+    </div>
+
+
+    <video width="400" height="400" autoplay loop style="margin:5rem 20rem 0rem 0rem">
+        <source src="{{url_for('static', filename='Videos/Tick-Tack-Toe.mp4')}}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+</div>
+
+{% endblock %}

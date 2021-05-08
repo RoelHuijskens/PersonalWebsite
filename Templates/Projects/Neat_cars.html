@@ -1,0 +1,34 @@
+{% extends "Project_page.html" %}
+{% block content %}
+
+<div class="flex-container_3" style="padding:5%">
+
+
+
+
+    <div id="right_item" style="max-width:40%;min-width:10rem;padding:0rem 4rem">
+        <h2>Self driving cars with <a style="color:black" href="https://neat-python.readthedocs.io/en/latest/index.html">NEAT</a></h2>
+        <p>
+            This program aims to learn how to steer a car around a given track using a 1 hidden-layer feed-forward neural network. This network is optimized by creating 50 different network configurations each generation
+            and assigning each network to a car. The input variables are the distances between the sides of the track and the car based on the 3 different vision traces presented in green in the example on the right, the output variables
+            determine whether the car will break (the gas paddle is always fully pressed) and whether the car should steer left or right.
+            Next depending on how well the car performs (the more checkpoints it passes) the more cars will resemble that configuration in the next generation. The game and scoring mechanics are all made by me, the
+            <a href="https://neat-python.readthedocs.io/en/latest/index.html" style="color:grey"><i>NEAT</i></a> module is utilized for creating different generations of neural networks.
+
+        </p>
+
+        <p> <a href="https://github.com/RoelHuijskens/Self_driving_cars_neat" style="color:grey"> Give it a try</a> </p>
+
+    </div>
+
+    
+        
+    <video autoplay loop id ="left_item" style="margin:5rem 5rem 0rem 0rem;float:right;width:40%">
+          <source src="{{url_for('static', filename='Videos/Neat_cars.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+    </video>
+
+
+</div>
+
+{% endblock %}
