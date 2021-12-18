@@ -1,27 +1,47 @@
-{% extends "Starting_page.html" %}
-
-{% block content %} 
-
-
-
-
-    <div style="height:10%"></div>
-
-    <div style="align-content:center;height:40%">
-        <img src="{{url_for('static', filename='images/Me.jpg')}}" style="  height:50vh;border-radius: 50%;box-shadow: 1px 1px 12px;display: block;margin-left: auto;margin-right: auto;"
-             id="top_item">
-    </div>
-    <br>
-    <div style="text-align:center;font-size:200%;height:5%" id="top_item">Roel Huijskens</div>
-    <div style="text-align:center;"><i style="color:grey;height:15%;" id="top_item">Applied statistics graduate | Improving programming repertoire | IT trainee at APG (via Createment)</i></div>
-    <hr width="50%" id="top_item">
-    <br>
-    <br>
-    <br>
+<html>
+<head>
+<link rel="stylesheet" href="{{url_for('static', filename='Flying.css')}}">
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
 
 
 
+	<div class="landscape">
+	<div class="sky" style = "z-index:100">
+		
+			<span class="flex-container" id="menu_bar">
+					<a class="menu_button" href="./index">Home</a>
+					<a class="menu_button" href="./About">About</a>
+					<a class="menu_button" href="./projects">Projects</a>
+				<a class="menu_button" href="./More">More</a>
+					<span><a style = "font-family:'Calibri'">Menu</a><img src="{{url_for('static', filename='icons/Hamburger.png')}}" style="height:1rem;opacity:0.5;padding: 0rem 0rem 0rem 1rem"></span>
+				</span>
+	
+		<div id = "imagecontainer">
+		<img src="static/images/Me.jpg" class = "me">
+	</div>
+		<div id = "subtextcontainer">
+		<div id = "title">Roel Huijskens</div>
+		<div id = "subtext"></div>
+		</div>
+	</div>
+	<div class="ground"></div>
+	</div>
+	
+	<div class="cover_gap"></div>
 
 
 
-{% endblock %}
+<div id="oncomming" style="z-index:2"></div>
+
+
+
+
+
+
+</body>
+<script src="{{url_for('static', filename='FrontPageSetup.js')}}"></script>
+</html>

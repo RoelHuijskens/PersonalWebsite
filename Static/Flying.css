@@ -1,0 +1,277 @@
+/* Applies to the entire body of the HTML document (except where overridden by more specific
+selectors). */
+body {
+  margin: 0;
+  background-color: white;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  height:100vh;
+  z-index:0;
+}
+
+/* Applies to all <h1>...</h1> elements. */
+h1 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: 5px;
+}
+
+
+
+/* Applies to all elements with <... class="someclass"> specified. */
+
+.landscape {
+	width:100vw;
+	height:99vh;
+	position: absolute;
+	animation-name: drop_sky;
+  	animation-duration: 3s;
+	top:0;
+}
+
+.sky { 
+	background-color:rgb(240,240,240);
+	width:100vw;
+	height:75vh;
+	z-index:100;
+	position:relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	}
+
+@keyframes drop_sky {
+	from {
+		top:-75vh;
+	}
+		
+	to {
+		top:0;
+		}
+	}
+.cover_gap {
+	width: 100vw;
+	height: 2vh;
+	background-color: rgb(255,255,255);
+	z-index:200;
+	position: fixed;
+	bottom:0;
+}
+
+.ground { 
+	background-color:rgb(255,255,255);
+	width:100vw;
+	height:24vh;
+	bottom:0;
+	z-index: 300;
+	border-top:solid 1px;
+	position:relative;
+	}
+
+
+/* Applies to the element with <... id="someid"> specified. */
+/*#someid { color: green; }*/
+
+
+
+@keyframes move_to_back {
+  from {
+	  top:20vh;
+	  left:-20vw;
+  }
+  
+  to {
+	  top:70vh;
+	  left:50vw;
+	  height:0;
+	  width:0;
+	  }
+}
+
+/* The element to apply the animation to */
+.block {
+  position:absolute;
+  left:-20vw;
+  top:20vh;
+  height:50vh;
+  width:20vw;
+  background-color: red;
+  animation-name: move_to_back;
+  animation-duration: 3s;
+  border-style:solid;
+}
+
+
+
+@keyframes move-gravel {
+  0% {
+	 font-size:4rem;
+  }
+  
+  50% {
+	  bottom:25vh;
+	  left:50vw;
+	  height:1px;
+	  width:1px;
+	  font-size:0;
+	  text-shadow: 0 0 15px
+	  }
+   
+   100%{
+	  bottom:25vh;
+	  left:50vw;
+	  height:1px;
+	  width:1px;
+	  font-size:0;
+	  text-shadow: 0 0 15px
+   }
+}
+
+/* The element to apply the animation to */
+.gravel {
+  position:fixed;
+  left:30VW;
+  bottom:-2rem;
+  height:2rem;
+  animation-name: move-gravel;
+  animation-timing-function: cubic-bezier(0,.74,.42,1);
+  animation-iteration-count:infinite;
+  animation-duration:30s;
+
+}
+
+@keyframes introduce-picture {
+	0%{
+		bottom:-61vh;
+		box-shadow: 0 0 0;
+		height: 24vh;
+	}
+	
+	65%{
+		bottom:-61vh;
+		height: 24vh;
+		box-shadow: 0 0 0;
+	}
+
+	66%{
+		bottom:-61vh;
+		height: 24vh;
+		box-shadow: 0 0 0;
+
+	}
+
+	100% {
+		bottom:0; 
+		height: 45vh;
+		
+		
+	}
+}
+
+@keyframes introduce-subtext {
+	0%{
+		bottom:-15vh;
+	}
+	
+	
+	80%{
+		bottom:-15vh;
+
+	}
+
+	100% {
+		bottom:0;
+		
+	}
+
+}
+
+
+.me {
+	position:relative;
+	height:45vh;
+	border-radius: 50%;
+	box-shadow: 1px 1px 12px;
+	bottom:0;
+	z-index: 200;
+	animation-name:introduce-picture;
+	animation-timing-function: cubic-bezier(.76,.12,.42,.89);
+	animation-duration:4.5s;
+	
+}
+
+#imagecontainer{
+	margin-top:2vh;
+	display: flex;
+	justify-content: center;
+	height: 45vh;
+
+}
+
+#subtext{
+	font-style: italic;
+	font-size: 2.3vh;
+	z-index: 500;
+}
+
+
+
+#title{
+	font-size: 4vh;
+	z-index: 500;
+}
+
+#subtextcontainer{
+	position: relative;
+	text-align: center;
+	z-index: 500;
+	animation-name: introduce-subtext;
+	animation-duration: 6s;
+	height: 15vh;
+	padding-top: 1rem;
+}
+
+
+.menu_button {
+    position:relative;
+    font-family:Calibri;
+    visibility:hidden;
+    text-decoration:none;
+    color:grey;
+}
+
+#menu_bar {
+    color: grey;
+    font-family: 'Calibri';
+	font-size: 3vh;
+    text-decoration: none;
+	width:100%;
+	height: 8vh;
+	padding-top: 4vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+}
+
+@-webkit-keyframes Float_in_text {
+    from {
+        left: 10rem;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+#menu_bar:hover > .menu_button {
+	-webkit-animation-name: Float_in_text;
+	-webkit-animation-duration: 0.5s;
+	visibility: visible;
+}
+
+.menu_button:hover {
+    color: black;
+}
