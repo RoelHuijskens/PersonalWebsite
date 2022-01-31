@@ -211,6 +211,7 @@ h1 {
 #subtext{
 	font-style: italic;
 	font-size: 2.3vh;
+	
 	z-index: 500;
 }
 
@@ -235,15 +236,19 @@ h1 {
 .menu_button {
     position:relative;
     font-family:Calibri;
+	font-size: 1.3rem;
     visibility:hidden;
     text-decoration:none;
     color:grey;
+	transition-duration: 0.3s;
+	left:10rem;
+    opacity:0;
 }
 
 #menu_bar {
     color: grey;
     font-family: 'Calibri';
-	font-size: 3vh;
+	font-size: 1.3rem;
     text-decoration: none;
 	width:100%;
 	height: 8vh;
@@ -254,24 +259,16 @@ h1 {
 
 }
 
-@-webkit-keyframes Float_in_text {
-    from {
-        left: 10rem;
-        opacity: 0
-    }
 
-    to {
-        left: 0;
-        opacity: 1
-    }
-}
 
 #menu_bar:hover > .menu_button {
-	-webkit-animation-name: Float_in_text;
-	-webkit-animation-duration: 0.5s;
+	left: 0;
+	opacity: 1;
 	visibility: visible;
 }
 
 .menu_button:hover {
     color: black;
+	font-family: 'Calibri';
+	font-size: 1.3rem;
 }

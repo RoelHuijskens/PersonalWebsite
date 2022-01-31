@@ -112,25 +112,18 @@ span {
     visibility:hidden;
     text-decoration:none;
     color:grey;
+    transition-duration: 0.3s;
+    left:10rem;
+    opacity:0;
 }
 
-@-webkit-keyframes Float_in_text {
-    from {
-        left: 10rem;
-        opacity: 0
-    }
-
-    to {
-        left: 0;
-        opacity: 1
-    }
-}
 
 #menu_bar {
     color: grey;
     font-family: 'Calibri';
     text-decoration: none;
     height:10rem;
+
 
 }
 
@@ -157,8 +150,8 @@ span {
 
 
     #menu_bar:hover > .menu_button {
-        -webkit-animation-name: Float_in_text;
-        -webkit-animation-duration: 0.5s;
+        left: 0;
+        opacity: 1;
         visibility: visible;
     }
 
